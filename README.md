@@ -19,17 +19,17 @@ Some notes on and programs for the PicoCalc.
 #### Updating the Firmware
 
 - Press Bootsel on Pi Pico
-- Plug in Device using Mini USB connector
+- Plug in the Device using the **Mini USB** connector
 - You will now see the PicoCalc as a drive
 - Copy the .u2f file
-- Eject drive
+- Eject the drive
 - Unplug the PicoCalc
 - Reboot
 
 ## Connecting via Serial 
 
-- Use the USB-C connector
-- Use a terminal program (e.g., [tio](https://github.com/tio/tio), [minicom](https://formulae.brew.sh/formula/minicom) on a Nac) to connect to device
+- Use the **USB C** connector
+- Use a terminal program (e.g., [tio](https://github.com/tio/tio) or [minicom](https://formulae.brew.sh/formula/minicom) on a Mac) to connect to device
   - `tio /dev/tty.usberial-110`
   - `minicom -D /dev/tty.usberial-110 -b 115200 -c`
 - Settings:
@@ -41,7 +41,7 @@ Some notes on and programs for the PicoCalc.
 
 ### File Transfer via Serial
 
-- enter `XMODEM RECEIVE` via console on the PicoCalc
+- Enter `XMODEM RECEIVE` via console on the PicoCalc
 - In Terminal Program use: XModem Send
 
 ## MMBasic
@@ -54,7 +54,7 @@ Some notes on and programs for the PicoCalc.
 | F3 | list |
 | F4 | edit |
 | F10 | autosave |
-|| CTRL + C| Exit program |
+| CTRL + C| Exit program |
 
 ### Defining additional Shortcuts ( F1, F5 - F9)
 
