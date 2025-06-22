@@ -5,7 +5,7 @@ Some notes on and programs for the PicoCalc.
 
 ## Hardware
 
-- comes with a Pi Pico
+- comes with a [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#pico-1-family)
 - Pin-compatible devices can also be used, but need a new firmware, e.g.
   - Pico 2W
   - [Luckfox Lyra](https://wiki.luckfox.com/Luckfox-Lyra/Introduction/)
