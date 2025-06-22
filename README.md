@@ -12,10 +12,11 @@ Some notes on and programs for the PicoCalc.
 
 ### Pico Pinout
 - for the Pico pinout see [pico.pinout.xyz](https://pico.pinout.xyz/)
-- IC2: GP6, GP7 (hardwired to built-in keyboard)
-- SPI (for the LCD): GP10, GP11, GP12
-- SD Card: GP17, GP18, GP19, GP16
-- Audio (PWM): GP26, GP27
+- used pins
+  - **IC2**: GP6, GP7 (hardwired to built-in keyboard)
+  - **SPI** (for the LCD): GP10, GP11, GP12
+  - **SD Card**: GP17, GP18, GP19, GP16
+  - **Audio** (PWM): GP26, GP27
 - available via pin headers
   -   GP2, GP3, GP4, GP5, GP21, GP28
 
