@@ -5,9 +5,18 @@ Some notes on and programs for the PicoCalc.
 
 ## Hardware
 
-- Screen Resolution: 320x320px
-  
+### Pinout
+- IC2: GP6, GP7 (hardwired to built-in keyboard)
+- SPI (for the LCD): GP10, GP11, GP12
+- SD Card: GP17, GP18, GP19, GP16
+- Audio (PWM): GP26, GP27
+- available via pin headers
+  -   GP2, GP3, GP4, GP5, GP21, GP28
 
+- LCD
+  - ILI9488P, controlled via SPI
+  - Screen Resolution: 320x320px
+  
 ## Firmware 
 
 ### MMBasic
