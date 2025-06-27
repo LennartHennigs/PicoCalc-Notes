@@ -1,4 +1,6 @@
+
 # MMBasic 6.0.0.2 Style Guide for PicoCalc
+
 
 **Description**: This guide captures recommended coding conventions and formatting practices for writing clean, consistent, and visually expressive MMBasic code for the PicoCalc. 
 
@@ -52,7 +54,6 @@ CONST HEAD_COL = RGB(0, 255, 0)
 - Floating-point vars are created by default (`x = 3.14`).
 - Use `%` suffix for integers if needed for clarity (`count% = 10`).
 - Use `!` for floating point variables.
-suffix '!' to a variable's name
 - Strings are denoted by a `$` suffix(`name$ = "Alice"`).
 
 ## Functions and Subroutines
@@ -107,13 +108,13 @@ ENDIF
 
 	| Key | ASCII Code |
 	|--|--|
-	| Up	  | 128 |
+	| Up	| 128 |
 	| Down	| 129 |
 	| Left	| 130 |
 	| Right	| 131 |
-	| F1	  | 145 |
-	| F2	  | 146 |
-	| F10	  | 154 |
+	| F1	| 145 |
+	| F2	| 146 |
+	| F10	| 154 |
 
 - For PS2 and USB keyboards, if the shift key is simultaneously pressed with the function keys F1 to F12 then 40 (hex) is added to the code
 
