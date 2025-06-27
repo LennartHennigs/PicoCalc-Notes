@@ -2,7 +2,7 @@
 # MMBasic 6.0.0.2 Style Guide for PicoCalc
 
 
-**Description**: This guide captures recommended coding conventions and formatting practices for writing clean, consistent, and visually expressive MMBasic code for the PicoCalc. 
+**Description**: This guide captures recommended coding conventions and formatting practices for writing clean, consistent, and visually expressive MMBasic code for PicoMite on the PicoCalc. 
 
 **Goal**: Use it to generate, review or format MMBASIC code.
 
