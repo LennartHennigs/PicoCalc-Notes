@@ -6,7 +6,7 @@ Some notes on and programs for the PicoCalc.
 
 ### Access SD Card
 ```basic
-DRIVE "B:"
+DRIVE "B:
 FILES
 ```
 
