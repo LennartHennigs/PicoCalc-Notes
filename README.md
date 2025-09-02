@@ -2,6 +2,17 @@
 
 Some notes on and programs for the PicoCalc.
 
+## Helpful Commands
+
+### Access SD Card
+```basic
+DRIVE "B:"
+FILES
+```
+
+```basic
+EDIT
+```
 
 ## Hardware
 
