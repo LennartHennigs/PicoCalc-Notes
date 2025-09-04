@@ -1,12 +1,23 @@
-
 # MMBasic 6.0.0.2 Style Guide for PicoCalc
 
+**Description**: This guide captures recommended coding conventions and formatting practices for writing clean, consistent, and visually expressive MMBasic code for PicoMite on the PicoCalc.
 
-**Description**: This guide captures recommended coding conventions and formatting practices for writing clean, consistent, and visually expressive MMBasic code for PicoMite on the PicoCalc. 
-
-**Goal**: Use it to generate, review or format MMBASIC code.
+**Goal**: Use this style guide to generate, review, and format MMBasic code. Focus on programming practices, syntax conventions, and code structure rather than hardware or system configuration.
 
 **Reference**: https://geoffg.net/Downloads/picomite/PicoMite_User_Manual.pdf
+
+## Programming Principles
+
+Follow these core principles when writing MMBasic code:
+
+- **DRY (Don't Repeat Yourself)** - Extract common code into subroutines and functions
+- **YAGNI (You Aren't Gonna Need It)** - Don't add functionality until it's actually needed
+- **KISS (Keep It Simple, Stupid)** - Prefer simple, readable solutions over complex ones
+- **Write short functions** - Keep subroutines and functions focused on a single task
+- **Avoid line numbers** - Use structured programming instead of numbered lines
+- **No GOTO statements** - Use structured control flow (IF/ENDIF, FOR/NEXT, DO/LOOP)
+- **Self-Documenting Code** - Use descriptive names instead of comments when possible
+- **Minimal Scope** - Keep variable lifetimes as short as possible using `local`
 
 ## Beginning
 
@@ -59,12 +70,21 @@ CONST HEAD_COL = RGB(0, 255, 0)
 ## Functions and Subroutines
 
 - Use snake_case for subroutines and functions (`init_drop`).
-- Use `SUB Name(parameters...)` to start a subroutine and `END SUB` to end it.
-- Use `EXIT SUB` and `EXIT FUNCTION` to return early when needed.
-- Declare all internal variables with `LOCAL` to avoid implicit globals.
-- Prefer `LOCAL` over implicit globals to avoid side effects.
-- Functions are similar to subs but return a value. Define with `FUNCTION Name(parameters...) [AS Type]` and end with `END FUNCTION`. Inside the function, assign to the function’s name to set the return value.
-- Declare return type with `AS <TYPE>` when needed (e.g. `AS INTEGER`).
+- Use `sub name(parameters...)` to start a subroutine and `end sub` to end it.
+- Use `exit sub` and `exit function` to return early when needed.
+- Always declare all internal variables with `local` to avoid implicit globals.
+- Prefer `local` over implicit globals to avoid side effects.
+- Functions are similar to subs but return a value. Define with `function name(parameters...) [as type]` and end with `end function`. Inside the function, assign to the function's name to set the return value.
+- Declare return type with `as <TYPE>` when needed (e.g. `as integer`).
+
+``` MMBASIC
+sub init_drop(index)
+  local x_pos, y_pos
+  x_pos = int(rnd() * 320)
+  y_pos = int(rnd() * 320)
+  ' use parameters and local variables
+end sub
+```
 
 ## Formatting
 
@@ -123,7 +143,12 @@ ENDIF
 - End programs with a clear main block:
 
 ``` MMBASIC
-rain
+sub Main
+...
+end sub
+
+Main()
+
 CLS
 ```
 

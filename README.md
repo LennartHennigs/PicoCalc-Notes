@@ -5,13 +5,25 @@ Some notes on and programs for the PicoCalc.
 ## Helpful Commands
 
 ### Access SD Card
+
 ```basic
 DRIVE "B:
 FILES
 ```
 
+### Invoking the Editor
+
 ```basic
 EDIT
+```
+
+### Take a Screenshot & load it
+
+```basic
+save image “out.bmp”, 0, 0, 319, 319
+...
+load image “out.bmp”
+
 ```
 
 ## Hardware
