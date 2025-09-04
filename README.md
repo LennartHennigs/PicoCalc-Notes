@@ -2,30 +2,6 @@
 
 Some notes on and programs for the PicoCalc.
 
-## Helpful Commands
-
-### Access SD Card
-
-```basic
-DRIVE "B:
-FILES
-```
-
-### Invoking the Editor
-
-```basic
-EDIT
-```
-
-### Take a Screenshot & load it
-
-```basic
-save image “out.bmp”, 0, 0, 319, 319
-...
-load image “out.bmp”
-
-```
-
 ## Hardware
 
 - comes with a [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#pico-1-family)
@@ -34,6 +10,7 @@ load image “out.bmp”
   - [Luckfox Lyra](https://wiki.luckfox.com/Luckfox-Lyra/Introduction/)
 
 ### Pico Pinout
+
 - for the Pico pinout see [pico.pinout.xyz](https://pico.pinout.xyz/)
 - used pins
   - **IC2**: GP6, GP7 (hardwired to built-in keyboard)
@@ -41,12 +18,12 @@ load image “out.bmp”
   - **SD Card**: GP17, GP18, GP19, GP16
   - **Audio** (PWM): GP26, GP27
 - available via pin headers
-  -   GP2, GP3, GP4, GP5, GP21, GP28
+  - GP2, GP3, GP4, GP5, GP21, GP28
 
 ### LCD
 
-  - ILI9488P, controlled via SPI
-  - Screen Resolution: 320x320px
+- ILI9488P, controlled via SPI
+- Screen Resolution: 320x320px
 
 ### Hardware Hacks
 
@@ -55,16 +32,14 @@ load image “out.bmp”
 - [LoRa](https://forum.clockworkpi.com/t/picocalc-with-lora/16773) via a ESP32 LoRa board
 - [Pi Zero2](https://forum.clockworkpi.com/t/raspberry-pi-zero-2-on-picocalc/17946) replacement
 
-## Firmware 
+## Firmware
 
 - [Luckfox Lyra Linux](https://forum.clockworkpi.com/t/luckfox-lyra-on-picocalc/16280)
-
 
 ### MMBasic
 
 - [MMBasic](https://github.com/madcock/PicoMiteAllVersions) branch for PicoCalc
 - [MMBasic Manual](https://geoffg.net/Downloads/picomite/PicoMite_User_Manual.pdf) (current version)
-
 
 #### Updating the Firmware
 
@@ -94,7 +69,7 @@ load image “out.bmp”
 - Enter `XMODEM RECEIVE` via console on the PicoCalc
 - In Terminal Program use: XModem Send
 
-## MMBasic
+## MMBasic Tips
 
 ### Pre-defined Shortcuts
 
@@ -112,7 +87,7 @@ load image “out.bmp”
 option f5 "DRIVE " + chr$(34) + "B:" + chr$(13)
 ```
 
- ### MMBasic Options
+### MMBasic Options
 
 ``` BASIC
 ' show current options
@@ -136,4 +111,28 @@ OPTION colorcode on
 
 ' line wrap in edit (needs MMBasic >= 6.x)
 OPTION continuation lines on
+```
+
+## Helpful Commands
+
+### Access SD Card
+
+```basic
+DRIVE "B:
+FILES
+```
+
+### Invoking the Editor
+
+```basic
+EDIT
+```
+
+### Take a Screenshot & load it
+
+```basic
+SAVE IMAGE “out.bmp”, 0, 0, 319, 319
+...
+LOAD IMAGE “out.bmp”
+
 ```
