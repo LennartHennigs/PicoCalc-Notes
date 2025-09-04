@@ -2,51 +2,51 @@
 ' inspired by appendix_pi @ instagram
 ' LH – 06/25
 
-OPTION BASE 1
-OPTION EXPLICIT
+option base 1
+option explicit
 
-RANDOMIZE TIMER
+randomize timer
 
-CONST DROPS = 100
-CONST TRAIL_LEN = 60
-CONST HEAD_COL = RGB(0, 255, 0)
-CONST TAIL_COL = RGB(0, 128, 0)
+const DROPS = 100
+const TRAIL_LEN = 60
+const HEAD_COL = rgb(0, 255, 0)
+const TAIL_COL = rgb(0, 128, 0)
 
-DIM x(DROPS), y(DROPS), length(DROPS)
-DIM i
+dim x(DROPS), y(DROPS), length(DROPS)
+dim i
 
-SUB init_drop(index)
-  x(index) = INT(RND() * 320)
-  y(index) = INT(RND() * 320)
-  length(index) = INT(RND() * TRAIL_LEN) + 10
-END SUB
+sub init_drop(index)
+  x(index) = int(rnd() * 320)
+  y(index) = int(rnd() * 320)
+  length(index) = int(rnd() * TRAIL_LEN) + 10
+end sub
 
-FOR i = 1 TO DROPS
+for i = 1 to DROPS
   init_drop(i)
-NEXT i
+next i
 
-SUB rain
-  DO WHILE INKEY$ = ""
-    FOR i = 1 TO DROPS
+sub rain
+  do while inkey$ = ""
+    for i = 1 to DROPS
 
-      IF length(i) > 0 AND x(i) < 320 AND y(i) < 320 THEN
-        PIXEL x(i), y(i), TAIL_COL
+      if length(i) > 0 and x(i) < 320 and y(i) < 320 then
+        pixel x(i), y(i), TAIL_COL
 
         x(i) = x(i) + 1
         y(i) = y(i) + 1
         length(i) = length(i) - 1
 
-        IF x(i) < 320 AND y(i) < 320 THEN
-          PIXEL x(i), y(i), HEAD_COL
-        ENDIF
-      ELSE
+        if x(i) < 320 and y(i) < 320 then
+          pixel x(i), y(i), HEAD_COL
+        endif
+      else
         init_drop(i)
-      ENDIF
+      endif
 
-    NEXT i
-  LOOP
-END SUB
+    next i
+  loop
+end sub
 
-LIST 
+list 
 rain
-CLS
+cls
